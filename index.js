@@ -42,10 +42,10 @@ function init() {
       };
 
       // Get GitHub API data by the axios get method
-      let queryUrl = `https://api.github.com/users/${username}`;
+      let queryUrl = `https://api.github.com/users/danghaonhien`;
 
       return axios.get(queryUrl, config).then(userData => {
-        let newUrl = `https://api.github.com/users/${username}/starred`;
+        let newUrl = `https://api.github.com/users/danghaonhien/starred`;
 
         axios.get(newUrl, config).then(starredRepos => {
           data = {
@@ -86,7 +86,7 @@ async function generatePDF(username) {
 
     // setup index.html file location
     await page.goto(
-      './index.html'
+      'file:///D:/ToTo/Berkeley_bootcamp/Homework/homework-8/index.html'
     );
     await page.emulateMediaType('screen');
 
@@ -101,6 +101,6 @@ async function generatePDF(username) {
 
     await browser.close();
   } catch (err) {
-    console.log('Oops! PDF generate error !!!');
+    console.log('Oh no no no! PDF generate error !!!');
   }
 }
