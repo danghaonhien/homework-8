@@ -1,32 +1,4 @@
-const colors = {
-  green: {
-    wrapperBackground: '#E6E1C3',
-    headerBackground: '#C1C72C',
-    headerColor: 'black',
-    photoBorderColor: 'black'
-  },
-  blue: {
-    wrapperBackground: '#5F64D3',
-    headerBackground: '#26175A',
-    headerColor: 'white',
-    photoBorderColor: '#73448C'
-  },
-  pink: {
-    wrapperBackground: '#879CDF',
-    headerBackground: '#FF8374',
-    headerColor: 'white',
-    photoBorderColor: '#FEE24C'
-  },
-  red: {
-    wrapperBackground: '#DE9967',
-    headerBackground: '#870603',
-    headerColor: 'white',
-    photoBorderColor: 'white'
-  }
-};
-
-function generateHTML(data) {
-  return `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
@@ -34,7 +6,7 @@ function generateHTML(data) {
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
       <link href="https://fonts.googleapis.com/css?family=BioRhyme|Cabin&display=swap" rel="stylesheet">
-      <title>${data.username} Profile</title>
+      <title>danghaonhien Profile</title>
       <style>
           @page {
             margin: 0;
@@ -52,7 +24,7 @@ function generateHTML(data) {
          height: 100%;
          }
          .wrapper {
-         background-color: ${colors[data.color].wrapperBackground};
+         background-color: #E6E1C3;
          padding-top: 80px;
          }
          body {
@@ -94,8 +66,8 @@ function generateHTML(data) {
          display: flex;
          justify-content: center;
          flex-wrap: wrap;
-         background-color: ${colors[data.color].headerBackground};
-         color: ${colors[data.color].headerColor};
+         background-color: #C1C72C;
+         color: black;
          padding: 5px;
          width: 95%;
          border-radius: 6px;
@@ -106,7 +78,7 @@ function generateHTML(data) {
          border-radius: 50%;
          object-fit: cover;
          margin-top: -75px;
-         border: 6px solid ${colors[data.color].photoBorderColor};
+         border: 6px solid black;
          box-shadow: rgba(0, 0, 0, 0.3) 4px 1px 20px 4px;
          }
          .photo-header h1, .photo-header h2 {
@@ -152,8 +124,8 @@ function generateHTML(data) {
          .card {
            padding: 20px;
            border-radius: 6px;
-           background-color: ${colors[data.color].headerBackground};
-           color: ${colors[data.color].headerColor};
+           background-color: #C1C72C;
+           color: black;
            margin: 20px;
          }
          
@@ -181,48 +153,45 @@ function generateHTML(data) {
   <body>
     <div class="wrapper">
       <div class="photo-header">
-        <img class="img" src="${data.img}">
+        <img class="img" src="https://avatars2.githubusercontent.com/u/58311274?v=4">
         <h1>Hi!</h1>
-        <h2>My name is ${data.username}</h2>
+        <h2>My name is ToTo!</h2>
         <i class="fas fa-map-marker-alt">
-          <a class="nav-link">${data.location}</a>
+          <a class="nav-link">San Francisco</a>
         </i>
         <i class="fas fa-id-card">
-          <a href="${data.gitProfile}" class="nav-link">GitHub</a>
+          <a href="https://github.com/danghaonhien" class="nav-link">GitHub</a>
         </i>
-        <i class="fas fa-blog">
-          <a href="${data.userBlog}" class="nav-link">Blog</a>
+        <i class="fab fa-instagram">
+          <a href="https://www.instagram.com/toto.graphy/" class="nav-link">IG</a>
         </i>
       </div>
       <div class="container">
          <div class="bio">
-          <h3>${data.userBio}</h3>
+          <h3>I design houses and build applications!</h3>
          </div>
          <div class="row">
             <div class="card col">
               <h3>Public Repositories</h3>
-              <h4>${data.repoNum}</h4>
+              <h4>11</h4>
             </div>
             <div class="card col">
               <h3>Followers</h3>
-              <h4>${data.followers}</h4>
+              <h4>0</h4>
             </div>
           </div>
           <div class="row">
             <div class="card col">
               <h3>GitHub Stars</h3>
-              <h4>${data.starNum}</h4>
+              <h4>0</h4>
             </div>
             <div class="card col">
               <h3>Following</h3>
-              <h4>${data.following}</h4>
+              <h4>0</h4>
             </div>
           </div>
       </div>
       
   </body>
 </html>
-      `;
-}
-
-module.exports = generateHTML;
+      
