@@ -42,10 +42,10 @@ function init() {
       };
 
       // Get GitHub API data by the axios get method
-      let queryUrl = `https://api.github.com/users/danghaonhien`;
+      let queryUrl = `https://api.github.com/users/${username}`;
 
       return axios.get(queryUrl, config).then(userData => {
-        let newUrl = `https://api.github.com/users/danghaonhien/starred`;
+        let newUrl = `https://api.github.com/users/${username}/starred`;
 
         axios.get(newUrl, config).then(starredRepos => {
           data = {
