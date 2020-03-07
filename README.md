@@ -27,3 +27,7 @@ Number of public repositories
 Number of followers
 Number of GitHub stars
 Number of users following
+
+
+![alt landingPage](./code.png)
+![alt landingPage](./profile.png)
